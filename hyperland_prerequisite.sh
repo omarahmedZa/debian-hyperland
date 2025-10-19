@@ -46,3 +46,4 @@ sudo apt install -y \
   playerctl
 
 sudo apt install -y gdm3
+sudo apt install -y xserver-xorg-video-amdgpu
