@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Install build dependencies
 sudo apt install -y \
   build-essential \
   git \
@@ -17,12 +18,7 @@ sudo apt install -y \
   libvulkan-dev \
   libx11-dev \
   libxcb1-dev \
-  libxcb-randr0-dev \
-  libxcb-util-dev \
-  libxcb-ewmh-dev \
-  libxcb-icccm4-dev \
-  libxcb-xinput-dev \
-  libxcb-composite0-dev
+  libxcb-randr0-dev
 
 
 # Clone and build Hyprland
