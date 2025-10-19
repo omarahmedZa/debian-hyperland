@@ -25,13 +25,12 @@ sudo apt install -y \
   libxcb-composite0-dev
 
 
-# Add Hyprland repository
-sudo curl -fsSLo /usr/share/keyrings/hyprland.asc https://packages.hyprland.org/hyprland.asc
-echo "deb [signed-by=/usr/share/keyrings/hyprland.asc] https://packages.hyprland.org/debian ./" | sudo tee /etc/apt/sources.list.d/hyprland.list
-
-# Install Hyprland
-sudo apt update
-sudo apt install hyprland
+# Clone and build Hyprland
+git clone https://github.com/hyprwm/Hyprland
+cd Hyprland
+meson build
+ninja -C build
+sudo ninja -C build install
 
 sudo apt install -y \
   waybar \
